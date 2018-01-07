@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<title>Image Search</title>
+		<meta name="description" content="Image Search Project for Kosmos&Kaos">
+		<meta name="author" content="Hafsteinn Hjartarson">
+
+		<!--Load 3rdParty-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!--Load custom styles-->
+		<link rel="stylesheet" href="styles/searchBar.css">
+		<link rel="stylesheet" href="styles/imageList.css">
+
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body >
+		<!--Load Configuration-->
+		<script src="config.js"></script>
+
+		<!--Load 3rdParty-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous"></script>
+	    <script src="//unpkg.com/mithril/mithril.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+
+	    <!--Load Components-->
+	    <script src="components/images.js"></script>
+	    <script src="components/imageList.js"></script>
+	    <script src="components/searchBar.js"></script>
+
+	    <div id="searchBar"></div>
+	    <div id="images" class="container"></div>
+
+	    <script>
+
+		    $(document).ready(function(){
+		    	var images = document.getElementById("images");
+		    	var searchBar = document.getElementById("searchBar");
+
+			    m.mount(searchBar, _searchBar);
+				m.mount(images, _imageList);
+		    });	
+
+	    </script>
+
+	</body>
+</html>
